@@ -1,0 +1,1238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+      くらべる保険なび - 保険 比較・見積もり、保険の窓口相談・出張訪問は無料
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="株式会社ＬＨＬ" />
+    <meta
+      name="title"
+      content="くらべる保険なび - 保険 比較・見積もり、保険の窓口相談・出張訪問は無料"
+    />
+    <meta
+      name="description"
+      content="安心と納得の保険選びなら、くらべる保険なびへ。保険比較や資料請求、簡単見積もり、人気保険ランキング、そして最適な保険の選び方まで、サポートいたします。保険の窓口や出張訪問での保険見直しや保険相談も、無料でご利用いただけます。"
+    />
+    <meta name="keywords" content="　" />
+    <meta name="apple-mobile-web-app-title" content="くらなび" />
+    <meta name="application-name" content="くらなび" />
+    <link rel="canonical" href="http://127.0.0.1:8000/web/" />
+    <link rel="stylesheet" href="{% static 'css/comparison.css'%}" />
+  </head>
+
+  <body id="top">
+    <header id="header" class="l-header">
+      <div class="l-header__info">
+        <p class="l-header__info-text">
+          保険・⽐較 | はじめての保険選びに。納得・安⼼の保険⽐較サイト
+        </p>
+      </div>
+
+      <div class="l-header__contents">
+        <div class="l-header__logo">
+          <a
+            class="l-header__logo-link"
+            href="http://127.0.0.1:8000/web/"
+            title=""
+          >
+            ロゴがここに入る
+          </a>
+        </div>
+        <ul class="l-header__sub-nav">
+          <li class="l-header__sub-nav-item">
+            <button class="l-header__sub-nav-button">
+              <img
+                class="l-header__telephone--img"
+                src="../../../static/img/icon_telephone.png"
+                alt=""
+              />お問合わせ・ご相談
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div role="navigation" class="l-header__nav">
+        <ul class="l-global-nav">
+          <li class="l-global-nav__item">
+            <a
+              class="l-global-nav__item-a"
+              href="http://127.0.0.1:8000/web/"
+              class="l-global-nav__btn l-global-nav__btn--diff"
+              title=""
+            >
+              <img
+                class="l-global-nav__icon"
+                src="../../../static/img/icon_kuraberu.svg"
+                alt=""
+              />
+              <span class="l-global-nav__btn-text">くらべる</span></a
+            >
+          </li>
+          <li class="l-global-nav__item">
+            <a
+              class="l-global-nav__item-a"
+              href="http://127.0.0.1:8000/web/"
+              class="l-global-nav__btn l-global-nav__btn--ranking"
+              title=""
+            >
+              <img
+                class="l-global-nav__icon"
+                src="../../../static/img/icon_ranking.svg"
+                alt=""
+              />
+              <span class="l-global-nav__btn-text">ランキング</span></a
+            >
+          </li>
+          <li class="l-global-nav__item">
+            <a
+              class="l-global-nav__item-a"
+              href="http://127.0.0.1:8000/web/"
+              class="l-global-nav__btn l-global-nav__btn--search"
+              title=""
+            >
+              <img
+                class="l-global-nav__icon"
+                src="../../../static/img/icon_search.svg"
+                alt=""
+              />
+              <span class="l-global-nav__btn-text">さがす</span></a
+            >
+          </li>
+          <li class="l-global-nav__item">
+            <a
+              class="l-global-nav__item-a"
+              href="http://127.0.0.1:8000/web/"
+              class="l-global-nav__btn l-global-nav__btn--seminar"
+              title=""
+            >
+              <img
+                class="l-global-nav__icon"
+                src="../../../static/img/icon_manabu.svg"
+                alt=""
+              />
+              <span class="l-global-nav__btn-text">学ぶ・知る</span></a
+            >
+          </li>
+          <li class="l-global-nav__item">
+            <a
+              class="l-global-nav__item-a"
+              href="http://127.0.0.1:8000/web/"
+              class="l-global-nav__btn l-global-nav__btn--consultation"
+              title=""
+            >
+              <img
+                class="l-global-nav__icon"
+                src="../../../static/img/icon_soudan.svg"
+                alt=""
+              />
+              <span class="l-global-nav__btn-text">相談する</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <dialog class="p-comparison__narrowdown" open>
+      <div class="p-comparison__narrow-top">
+        <img
+          class="p-comparison__narrowdown-title-img"
+          src="../../../static/img/logo_sample.svg"
+          alt=""
+        /><span class="p-comparison__narrow-title">絞り込み</span>
+        <button class="p-comparison__close-button js-narrowdown-close">
+          <img
+            class="p-comparison__cross-img"
+            src="../../../static/img/icon_cross.svg"
+            alt=""
+          />
+          閉じる
+        </button>
+      </div>
+      <div class="p-comparison__narrow-content">
+        <div class="p-comparison__content-title">
+          <span>保険期間</span>
+        </div>
+        <ul class="p-comparison__narrow-ul">
+          <li class="p-comparison__narrow-li">
+            <input
+              class="p-comparison__narrow-checkbox"
+              id="narrow01"
+              type="checkbox"
+              name=""
+              value=""
+            /><label for="narrow01"></label>終身
+          </li>
+          <li class="p-comparison__narrow-li">
+            <input
+              class="p-comparison__narrow-checkbox"
+              id="narrow02"
+              type="checkbox"
+              name=""
+              value=""
+            /><label for="narrow02"></label>定期
+          </li>
+        </ul>
+        <div class="p-comparison__content-title">
+          <span>特定疾病（がん以外）の保障</span
+          ><img
+            class="p-comparison__narrow-detail-img"
+            src="../../../static/img/icon_syousai.svg"
+            alt=""
+          />
+        </div>
+        <ul class="p-comparison__narrow-ul">
+          <li class="p-comparison__narrow-li">
+            <input
+              class="p-comparison__narrow-checkbox"
+              id="narrow03"
+              type="checkbox"
+              name=""
+              value=""
+            /><label for="narrow03"></label>あり
+          </li>
+          <li class="p-comparison__narrow-li">
+            <input
+              class="p-comparison__narrow-checkbox"
+              id="narrow04"
+              type="checkbox"
+              name=""
+              value=""
+            /><label for="narrow04"></label>なし
+          </li>
+        </ul>
+        <div class="p-comparison__content-title">
+          <span>通院および治療時の保障</span
+          ><img
+            class="p-comparison__narrow-detail-img"
+            src="../../../static/img/icon_syousai.svg"
+            alt=""
+          />
+        </div>
+        <ul class="p-comparison__narrow-ul">
+          <li class="p-comparison__narrow-li">
+            <input
+              class="p-comparison__narrow-checkbox"
+              id="narrow05"
+              type="checkbox"
+              name=""
+              value=""
+            /><label for="narrow05"></label>通院給付⾦
+          </li>
+          <li class="p-comparison__narrow-li">
+            <input
+              class="p-comparison__narrow-checkbox"
+              id="narrow06"
+              type="checkbox"
+              name=""
+              value=""
+            /><label for="narrow06"></label>放射線治療
+          </li>
+          <li class="p-comparison__narrow-li">
+            <input
+              class="p-comparison__narrow-checkbox"
+              id="narrow07"
+              type="checkbox"
+              name=""
+              value=""
+            /><label for="narrow07"></label>薬物療法（抗がん剤等）
+          </li>
+        </ul>
+        <div class="p-comparison__content-title">
+          <span>申込方法</span
+          ><img
+            class="p-comparison__narrow-detail-img"
+            src="../../../static/img/icon_syousai.svg"
+            alt=""
+          />
+        </div>
+        <ul class="p-comparison__narrow-ul">
+          <li class="p-comparison__narrow-li">
+            <input
+              class="p-comparison__narrow-checkbox"
+              id="narrow08"
+              type="checkbox"
+              name=""
+              value=""
+            /><label for="narrow08"></label>対面
+          </li>
+          <li class="p-comparison__narrow-li">
+            <input
+              class="p-comparison__narrow-checkbox"
+              id="narrow09"
+              type="checkbox"
+              name=""
+              value=""
+            /><label for="narrow09"></label>ネット
+          </li>
+        </ul>
+      </div>
+      <div class="p-comparison__narrow-box">
+        <div class="p-comparison__search-sum">
+          <span class="">検索結果</span>
+          <div class="p-comparison__search-sum-container">
+            <span class="p-comparison__search-num">20</span
+            ><span class="">件</span>
+          </div>
+        </div>
+        <button class="p-comparison__clear-button">クリア</button>
+        <button
+          class="p-comparison__narrow-button js-narrowdown-close"
+          onclick="OnButtonClick()"
+        />
+        選択した条件で<br />絞り込む
+      </div>
+    </dialog>
+    <div class="p-comparison__overlay is-narrowdown-back"></div>
+    <div class="p-comparison__pankuzu">
+      <a class="p-comparison__pankuzu-item">保険 ⽐較 なび</a>
+      <img
+        class="p-comparison__pankuzu-item-img"
+        src="../../../static/img/icon_right.svg"
+        alt=""
+      />
+      <a class="p-comparison__pankuzu-item">医療保険</a>
+      <img
+        class="p-comparison__pankuzu-item-img"
+        src="../../../static/img/icon_right.svg"
+        alt=""
+      />
+      <span class="p-comparison__pankuzu-text">医療保険 ⽐較</span>
+    </div>
+    <div class="p-comparison__baseline">
+      <div class="p-comparison__title">
+        <img
+          class="p-comparison__title-img"
+          src="../../../static/img/logo_sample.svg"
+          alt=""
+        />
+        <span class="p-comparison__title-text">医療保険</span>
+        <span class="p-comparison__title-sub">比較</span>
+      </div>
+      <div class="p-comparison__simulation">
+        <span class="p-comparison__insurance">保険料<br />試算</span>
+        <label class="p-comparison__search-age">
+          <select class="p-comparison__search-age-select">
+            <option value="30">30歳</option>
+            <option value="40">40歳</option>
+            <option value="50">50歳</option>
+          </select>
+        </label>
+        <table border="1" class="p-comparison__search-sex-table">
+          <tr>
+            <th
+              class="p-comparison__search-sex-th p-comparison__search-sex-left"
+            >
+              <input
+                class="p-comparison__search-sex-radio"
+                type="radio"
+                name="sex"
+                value="man"
+              />
+              <label for="man">男性</label>
+            </th>
+            <th
+              class="p-comparison__search-sex-th p-comparison__search-sex-right"
+            >
+              <input
+                class="p-comparison__search-sex-radio"
+                type="radio"
+                name="sex"
+                value="woman"
+              />
+              <label for="woman">女性</label>
+            </th>
+          </tr>
+        </table>
+      </div>
+      <div class="p-comparison__replace">
+        <span class="p-comparison__ranking-insurance"
+          ><span class="p-comparison__ranking-num-top">20</span>/<span
+            class="p-comparison__ranking-num-back"
+            >20</span
+          >表示</span
+        >
+        <div class="p-comparison__ranking-button-container">
+          <label class="p-comparison__ranking">
+            <select class="p-comparison__ranking-select">
+              <option value="">ランキング順</option>
+              <option value="">ランキング順</option>
+              <option value="">保険料が安い順</option>
+              <option value="">保険料が高い順</option>
+            </select>
+          </label>
+          <button class="p-comparison__narrow-open js-narrowdown-menu">
+            <img
+              class="p-comparison__narrow-open-img"
+              src="../../../static/img/logo_sample.svg"
+              alt=""
+            />絞り込む
+            <div class="p-comparison__narrow-active"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="p-comparison__rank">
+      <table border="1" class="p-comparison__rank-table">
+        <thead class="p-comparison__rank-table-fixed">
+          <tr class="sticky_col">
+            <th class="p-comparison__rank-table-button">
+              <button class="p-comparison__left-button">
+                <img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_check.svg"
+                  alt=""
+                />選んで比較
+              </button>
+            </th>
+            <th class="p-comparison__rank-table-check">
+              <input
+                class="p-comparison__rank_check"
+                id="rank_check01"
+                type="checkbox"
+                name=""
+                value=""
+              /><label for="rank_check01"></label>
+            </th>
+            <th class="p-comparison__rank-table-check">
+              <input
+                class="p-comparison__rank_check"
+                id="rank_check02"
+                type="checkbox"
+                name=""
+                value=""
+              /><label for="rank_check02"></label>
+            </th>
+            <th class="p-comparison__rank-table-check">
+              <input
+                class="p-comparison__rank_check"
+                id="rank_check03"
+                type="checkbox"
+                name=""
+                value=""
+              /><label for="rank_check03"></label>
+            </th>
+            <th class="p-comparison__rank-table-check">
+              <input
+                class="p-comparison__rank_check"
+                id="rank_check04"
+                type="checkbox"
+                name=""
+                value=""
+              /><label for="rank_check04"></label>
+            </th>
+          </tr>
+          <tr class="sticky_col">
+            <th class="p-comparison__rank-headline">ランキング</th>
+            {% for insurance in insurances %}
+            <th class="p-comparison__rank-table-cell">
+              {% if forloop.counter is 1 %}
+                <span class="p-comparison__color-gold">
+              {% elif forloop.counter is 2 %}
+                <span class="p-comparison__color-silver">
+              {% elif forloop.counter is 3 %}
+                  <span class="p-comparison__color-bronze">
+              {% else %}
+                  <span class="u-bold">
+              {% endif %} 
+                <span class="u-text-large">{{ forloop.counter }}</span>位</span>
+            </th>
+            {% endfor %}
+          </tr>
+          <tr class="sticky_col">
+            <th class="p-comparison__rank-headline">保険会社名</th>
+            {% for insurance in insurances %}
+            <th class="p-comparison__rank-table-cell">
+              {{ insurance.company }}
+            </th>
+            {% endfor %}
+          </tr>
+          <tr class="sticky_col">
+            <th class="p-comparison__rank-headline">商品名</th>
+            {% for insurance in insurances %}
+            <th class="p-comparison__rank-table-cell">
+              <img
+                class="p-comparison__rank-img"
+                src="../../../static/img/logo_medifit.png"
+                alt=""
+              />
+              <a class="p-comparison__detail-link" href="#" title=""
+                >詳細をみる</a
+              >
+              {{ insurance.company }}
+            </th>
+            {% endfor %}
+          </tr>
+          <tr class="sticky_col">
+            <th class="p-comparison__rank-headline">月額保険料</th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__premium-text">
+                <span class="u-text-large u-c-pink">1,240</span>円
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__premium-text">
+                <span class="u-text-large u-c-pink">1,664</span>円
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__premium-text">
+                <span class="u-text-large u-c-pink">1,750</span>円
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__premium-text">
+                <span class="u-text-large u-c-pink">1,820</span>円
+              </div>
+            </th>
+          </tr>
+          <tr class="sticky_col">
+            <th class="p-comparison__rank-headline">
+              <span class="p-comparison__rank-headline-text"
+                >保険相談 / ネット⾒積・申込</span
+              >
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <button class="p-comparison__rank-button-pink">
+                プロに<br />説明を聞く</button
+              ><button class="p-comparison__rank-button-blue">
+                ネット⾒積<br />申込<img
+                  class="p-comparison__window-img"
+                  src="../../../static/img/icon_window.svg"
+                  alt=""
+                />
+              </button>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <button class="p-comparison__rank-button-pink" disabled>
+                プロに<br />説明を聞く</button
+              ><button class="p-comparison__rank-button-blue" disabled>
+                ネット⾒積<br />申込
+              </button>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <button class="p-comparison__rank-button-pink">
+                プロに<br />説明を聞く</button
+              ><button class="p-comparison__rank-button-blue">
+                ネット⾒積<br />申込<img
+                  class="p-comparison__window-img"
+                  src="../../../static/img/icon_window.svg"
+                  alt=""
+                />
+              </button>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <button class="p-comparison__rank-button-pink">
+                プロに<br />説明を聞く</button
+              ><button class="p-comparison__rank-button-blue">
+                ネット⾒積<br />申込<img
+                  class="p-comparison__window-img"
+                  src="../../../static/img/icon_window.svg"
+                  alt=""
+                />
+              </button>
+            </th>
+          </tr>
+          <tr class="sticky_col">
+            <th class="p-comparison__rank-headline">
+              <span class="p-comparison__rank-headline-text"
+                >資料請求・保険相談</span
+              >
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <button class="p-comparison__rank-button-grean">
+                <input
+                  type="checkbox"
+                  class="p-comparison__rank-checkbox"
+                  name=""
+                  value="検討リスト"
+                />
+                <label class="p-comparison__rank-checkbox-text"
+                  >検討リスト</label
+                >
+              </button>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <button class="p-comparison__rank-button-grean">
+                <input
+                  type="checkbox"
+                  class="p-comparison__rank-checkbox"
+                  name=""
+                  value="検討リスト"
+                />
+                <label class="p-comparison__rank-checkbox-text"
+                  >検討リスト</label
+                >
+              </button>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <button class="p-comparison__rank-button-grean">
+                <input
+                  type="checkbox"
+                  class="p-comparison__rank-checkbox"
+                  name=""
+                  value="検討リスト"
+                />
+                <label class="p-comparison__rank-checkbox-text"
+                  >検討リスト</label
+                >
+              </button>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <button class="p-comparison__rank-button-grean">
+                <input
+                  type="checkbox"
+                  class="p-comparison__rank-checkbox"
+                  name=""
+                  value="検討リスト"
+                />
+                <label class="p-comparison__rank-checkbox-text"
+                  >検討リスト</label
+                >
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="p-comparison__rank-table-scroll">
+          <tr>
+            <td class="p-comparison__separate" colspan="5">
+              保険期間・払込期間
+            </td>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                保険期間<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">終身</th>
+            <th class="p-comparison__rank-table-cell">終身</th>
+            <th class="p-comparison__rank-table-cell">終身</th>
+            <th class="p-comparison__rank-table-cell">終身</th>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                払込期間<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">終身</th>
+            <th class="p-comparison__rank-table-cell">終身</th>
+            <th class="p-comparison__rank-table-cell">終身</th>
+            <th class="p-comparison__rank-table-cell">終身</th>
+          </tr>
+          <tr>
+            <td class="p-comparison__separate" colspan="5">入院時の補償</td>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                入院給付金<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-text-smallest">1日につき</span><br /><span
+                class="u-f17rem"
+                >5,000</span
+              ><span class="u-text-smallest">円</span>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-text-smallest">1日につき</span><br /><span
+                class="u-f17rem"
+                >5,000</span
+              ><span class="u-text-smallest">円</span>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-text-smallest">1日につき</span><br /><span
+                class="u-f17rem"
+                >5,000</span
+              ><span class="u-text-smallest">円</span>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-text-smallest">1日につき</span><br /><span
+                class="u-f17rem"
+                >5,000</span
+              ><span class="u-text-smallest">円</span>
+            </th>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                1入院の限度日数<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-f17rem">60</span
+              ><span class="u-text-smallest">日</span>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-f17rem">60</span
+              ><span class="u-text-smallest">日</span>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-f17rem">60</span
+              ><span class="u-text-smallest">日</span>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-f17rem">60</span
+              ><span class="u-text-smallest">日</span>
+            </th>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                通算限度日数<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-f17rem">1,095</span
+              ><span class="u-text-smallest">日</span>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-f17rem">1,095</span
+              ><span class="u-text-smallest">日</span>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-f17rem">1,095</span
+              ><span class="u-text-smallest">日</span>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <span class="u-f17rem">1,095</span
+              ><span class="u-text-smallest">日</span>
+            </th>
+          </tr>
+          <tr>
+            <td class="p-comparison__separate" colspan="5">治療時の補償</td>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                手術給付金<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">通院保証</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+          </tr>
+          <tr>
+            <td class="p-comparison__separate" colspan="5">その他の保障</td>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                特定失病保証<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                先進医療<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>【先進医療・患 者申出療養給付 ⾦】技術料相当</p>
+                <div class="p-comparison__hidden-text">
+                  <p>これはの続きの文章です。これはセの続きの文章です。</p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>【先進医療・患 者申出療養給付 ⾦】技術料相当</p>
+                <div class="p-comparison__hidden-text">
+                  <p>これはの続きの文章です。これはの続きの文章です。</p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>【先進医療・患 者申出療養給付 ⾦】技術料相当</p>
+                <div class="p-comparison__hidden-text">
+                  <p>これは続きの文章です。これは続きの文章です。</p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>【先進医療・患 者申出療養給付 ⾦】技術料相当</p>
+                <div class="p-comparison__hidden-text">
+                  <p>これは続きの文章です。これは続きの文章です。</p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">⼥性疾病の保障</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">その他</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+          </tr>
+          <tr>
+            <td class="p-comparison__separate" colspan="5">加入条件</td>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">契約年齢</th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>ネット申込・通 販:満18歳〜満 85歳</p>
+                <div class="p-comparison__hidden-text">
+                  <p>
+                    これはセクション 1 の続きの文章です。これはセクション 1
+                    の続きの文章です。
+                  </p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>0歳〜満85歳 (ネット申込は 満20歳〜満69</p>
+                <div class="p-comparison__hidden-text">
+                  <p>
+                    これはセクション 1 の続きの文章です。これはセクション 1
+                    の続きの文章です。
+                  </p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>0歳〜満85歳 (ネット申込は 満20歳〜満69</p>
+                <div class="p-comparison__hidden-text">
+                  <p>
+                    これはセクション 1 の続きの文章です。これはセクション 1
+                    の続きの文章です。
+                  </p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>0歳〜満85歳 (ネット申込は 満20歳〜満69</p>
+                <div class="p-comparison__hidden-text">
+                  <p>
+                    これはセクション 1 の続きの文章です。これはセクション 1
+                    の続きの文章です。
+                  </p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <td class="p-comparison__separate" colspan="5">申込方法</td>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                ネット<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <img
+                class="p-comparison__circle-img"
+                src="../../../static/img/icon_circle.svg"
+                alt=""
+              />
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <img
+                class="p-comparison__circle-img"
+                src="../../../static/img/icon_circle.svg"
+                alt=""
+              />
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <img
+                class="p-comparison__circle-img"
+                src="../../../static/img/icon_circle.svg"
+                alt=""
+              />
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <img
+                class="p-comparison__circle-img"
+                src="../../../static/img/icon_circle.svg"
+                alt=""
+              />
+            </th>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">
+              <div class="p-comparison__rank-headline-box">
+                対面<img
+                  class="p-comparison__detail-img"
+                  src="../../../static/img/icon_syousai.svg"
+                  alt=""
+                />
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <img
+                class="p-comparison__circle-img"
+                src="../../../static/img/icon_circle.svg"
+                alt=""
+              />
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <img
+                class="p-comparison__circle-img"
+                src="../../../static/img/icon_circle.svg"
+                alt=""
+              />
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <img
+                class="p-comparison__circle-img"
+                src="../../../static/img/icon_circle.svg"
+                alt=""
+              />
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <img
+                class="p-comparison__circle-img"
+                src="../../../static/img/icon_circle.svg"
+                alt=""
+              />
+            </th>
+          </tr>
+          <tr>
+            <td class="p-comparison__separate" colspan="5">
+              プラン概要(保険料試算条件)
+            </td>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">プラン概要</th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>試算条件：「60 ⽇型 疾病⼊院給 付⾦の特則適⽤</p>
+                <div class="p-comparison__hidden-text">
+                  <p>これはの続きの文章です。これはセの続きの文章です。</p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>試算条件：「60 ⽇型 疾病⼊院給 付⾦の特則適⽤</p>
+                <div class="p-comparison__hidden-text">
+                  <p>これはの続きの文章です。これはセの続きの文章です。</p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>試算条件：「60 ⽇型 疾病⼊院給 付⾦の特則適⽤</p>
+                <div class="p-comparison__hidden-text">
+                  <p>これはの続きの文章です。これはセの続きの文章です。</p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+            <th class="p-comparison__rank-table-cell">
+              <div class="p-comparison__section">
+                <p>試算条件：「60 ⽇型 疾病⼊院給 付⾦の特則適⽤</p>
+                <div class="p-comparison__hidden-text">
+                  <p>これはの続きの文章です。これはセの続きの文章です。</p>
+                </div>
+                <button
+                  class="p-comparison__toggle-button"
+                  onclick="toggleText(this)"
+                >
+                  <span class="p-comparison__readmore-text">続きを読む</span
+                  ><img
+                    class="p-comparison__readmore-img"
+                    src="../../../static/img/icon_readmore-blue.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <td class="p-comparison__separate" colspan="5">備考・その他</td>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">備考</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+            <th class="p-comparison__rank-table-cell">-</th>
+          </tr>
+          <tr>
+            <th class="p-comparison__rank-headline">備考文書番号</th>
+            <th class="p-comparison__rank-table-cell-left">
+              HP-311-701- 23046069(20 23.4.1)
+            </th>
+            <th class="p-comparison__rank-table-cell-left">
+              HP-311-701- 23046069(20 23.4.1)
+            </th>
+            <th class="p-comparison__rank-table-cell-left">
+              HP-311-701- 23046069(20 23.4.1)
+            </th>
+            <th class="p-comparison__rank-table-cell-left">
+              HP-311-701- 23046069(20 23.4.1)
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="p-comparison__remarks">
+      <ul class="p-article__remarks-list">
+        <li class="p-article__remarks-contents-item">
+          記載している保険料および保障内容などは20●●年●●⽉ ●●⽇現在のものです。
+        </li>
+        <li class="p-article__remarks-contents-item">
+          株式会社LHLにて取扱可能な保険会社のうち、保険会社から
+          サイト掲載の許可が得られた商品を掲載・⽐較しておりま す。
+        </li>
+        <li class="p-article__remarks-contents-item">
+          当サイトに掲載されていない商品については、保険相談にお
+          問い合わせください。
+        </li>
+        <li class="p-article__remarks-contents-item">
+          このページのランキングは、当社WEBサイト「くらべる保
+          険なび」を通じて共同募集を⾏った代理店における販売件数
+          に基づいて当社が作成したものであり、保険商品間の優劣を
+          意味するものではありません。商品改定やリニューアルの場
+          合は前の商品の順位を引き継ぎます。
+        </li>
+        <li class="p-article__remarks-contents-item">
+          商品の概要を説明しています。保険商品の詳細は保険会社の
+          ウェブサイト・パンフレット・契約概要・注意喚起情報・ご
+          契約のしおり・約款等を必ずご確認ください。
+        </li>
+        <li class="p-article__remarks-contents-item">
+          このページでは、異なる保険会社の保険商品を記載してお
+          り、それぞれの概要を表⽰しておりますので、商品を選択さ
+          れる際の参考情報としてご活⽤ください。
+        </li>
+        <li class="p-article__remarks-contents-item">
+          表⽰の保険料・⾦額は⼀例ですので、前提条件（被保険者の
+          年齢や性別等）によって保険料・⾦額が変わります。
+        </li>
+        <li class="p-article__remarks-contents-item">
+          保険商品を選択される際には、保険料だけでなく、保障（補
+          償）の内容等、他の要素も含め総合的に⽐較・検討ください
+          ますようお願いいたします。
+        </li>
+      </ul>
+    </div>
+    <div class="p-comparison__propaganda">
+      <div class="p-comparison__suggestion">
+        <div class="p-comparison__suggestion-title">かんたん保険提案</div>
+        <div class="p-comparison__suggestion-text">
+          簡単な質問にご回答いただくだけで、あなたにベスト商品をご提案させていただきます。
+        </div>
+        <img
+          class="p-comparison__suggestion-img"
+          src="../../../static/img/logo_sample.svg"
+          alt=""
+        />
+        <button class="p-comparison__propaganda-button">
+          かんたん保険提案へ
+        </button>
+      </div>
+      <div class="p-comparison__consultation">
+        <div class="p-comparison__suggestion-title">保険のプロに相談</div>
+        <div class="p-comparison__consultation-text">
+          自分一人で悩むより、<span class="u-u-line">一番の近道</span>です。
+        </div>
+        <div class="p-comparison__consultation-main">
+          <span class="u-bold">見直し</span>でも<span class="u-bold">新規</span
+          >でもご希望に沿った保険をご案内いたします。<br />
+          こんな方にオススメです。<br />
+          ・今入っている医療保険で大丈夫か不安<br />
+          ・保険料を節約したい<br />
+          ・そもそも保険の仕組みを教えてほしい<br />
+        </div>
+        <button class="p-comparison__propaganda-button">
+          保険相談について詳しく知る
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/comparison.js'%}"></script>
+  </body>
+</html>
